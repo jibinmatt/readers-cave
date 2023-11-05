@@ -8,7 +8,7 @@ allBooks.forEach(book => {
 	book.addEventListener("click", () => {
 		localStorage.setItem('id', book.getAttribute("data-value"));
 		console.log(book.getAttribute("data-value"))
-		window.open('./detail.html', '_blank');
+		window.open('./detail.html', "_self");
 	})
 
 	// handles loading of book-cover and book-title
