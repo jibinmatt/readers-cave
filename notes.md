@@ -38,3 +38,7 @@
 // };
 // getPost();
 // https://gutendex.com/books?languages=en
+
+
+# refactor the entire codebse
+- lets start with index.html and home-styles.css
