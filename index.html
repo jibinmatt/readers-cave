@@ -9,202 +9,84 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="main-body">
-  <div class="main-container">
-    <!-- <nav class="nav">
-      <form class="form" action="">
-        <div class="search-container">
-          <div class="svg-container">
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-              <mask id="mask0_88_33" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="33">
-              <path d="M15.3128 27.7082C22.159 27.7082 27.7087 22.1585 27.7087 15.3123C27.7087 8.46619 22.159 2.9165 15.3128 2.9165C8.46668 2.9165 2.91699 8.46619 2.91699 15.3123C2.91699 22.1585 8.46668 27.7082 15.3128 27.7082Z" fill="white" stroke="white" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M19.4373 10.4584C18.8962 9.91597 18.2532 9.48577 17.5453 9.19258C16.8374 8.89939 16.0786 8.74898 15.3124 8.75001C14.5462 8.74898 13.7873 8.89939 13.0795 9.19258C12.3716 9.48577 11.7286 9.91597 11.1875 10.4584" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M24.2246 24.2241L30.4116 30.4111" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              </mask>
-              <g mask="url(#mask0_88_33)">
-              <path d="M0 0H35V35H0V0Z" fill="#E96262"/>
-              </g>
-            </svg>
-          </div>
-          <input type="text" placeholder="search" name="" id="">
-        </div>  
-      </form>
-      <div class="dropdown"></div>
-    </nav> -->
-    <main class="main">
-      <header class="header">
-        <img onclick="location.reload()" src="./images/ReadersCave.svg" alt="logo">
-      </header>
-      <div class="buttons">
-        <hr class="top">
-        <div class="genre-buttons">
-          <div class="left-line"></div>
-          <a class="genre-btn" href="#science-fiction">science-fiction</a>
-          <a class="genre-btn" href="#fiction">fiction</a>
-          <a class="genre-btn" href="#fantasy">fantasy</a>
-          <a class="genre-btn" href="#non-fiction">non-fiction</a>
-          <a class="genre-btn" href="#horror">horror</a>
-          <a class="genre-btn" href="#historical">historical</a>
-          <div class="right-line"></div>
-        </div>
-        <hr class="bottom">
+  <main class="main">
+    <div class="title-box">
+      <div class="title gilda-display-regular">
+        Reader's Cave
       </div>
-      <div class="book-section">
-        <h3 id="science-fiction" class="genre-title">Science - Fiction</h3>
-        <div class="books">
-          <div class="book" data-value="1">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="2">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="3">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="4">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="5">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
+    </div>
+    <div class="spotlight-box">
+      <p class="spotlight gilda-display-regular">Today's Spotlight</p>
+      <div class="spotlight-book-cover"></div>
+      <div class="spotlight-book-info">
+        <p class="spotlight-book-title gilda-display-regular">The Bonehunters</p>
+        <p class="spotlight-book-author gilda-display-regular">Steven Erikson</p>
+        <p class="spotlight-book-desc work-sans">The Bonehunters begins two months after the events of House of Chains. The Malazan Fourteenth Army has destroyed the army of the Whirlwind, and Adjunct Tavore Paran has executed Sha'ik... <span class="desc-read-more">read more>></span></p>
       </div>
-      <div class="book-section">
-        <h3 id="fiction" class="genre-title">Fiction</h3>
-        <div class="books">
-          <div class="book" data-value="6">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="7">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="8">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="9">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="10">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
-      </div>
-      <div class="book-section">
-        <h3 id="fantasy" class="genre-title">Fantasy</h3>
-        <div class="books">
-          <div class="book" data-value="11">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="12">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="13">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="14">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="15">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
-      </div>
-      <div class="book-section">
-        <h3 id="non-fiction" class="genre-title">Non - Fiction</h3>
-        <div class="books">
-          <div class="book" data-value="16">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="17">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="18">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="19">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="20">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
-      </div>
-      <div class="book-section">
-        <h3 id="horror" class="genre-">Horror</h3>
-        <div class="books">
-          <div class="book" data-value="21">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="22">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="23">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="24">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="25">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
-      </div>
-      <div class="book-section">
-        <h3 id="historical" class="genre-title">Historical</h3>          
-        <div class="books">
-          <div class="book" data-value="26">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="27">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="28">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="29">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-          <div class="book" data-value="30">
-            <img class="book-cover" tabindex="0" loading="lazy" src="" alt="book-cover">
-            <p class="book-title"></p>
-          </div>
-        </div>
-      </div>
-      <footer class="footer">
-        <a class="self-link" target="_blank" href="https://github.com/jibinmatt">jibin james</a>
-      </footer>
-    </main>
-  </div>
+    </div>
+    <div class="tags-box">
+      <button class="tag work-sans" data-value="all">All</button>
+      <button class="tag work-sans" data-value="science-fiction">Science Fiction</button>
+      <button class="tag work-sans" data-value="fiction">Fiction</button>
+      <button class="tag work-sans" data-value="fantasy">Fantasy</button>
+      <button class="tag work-sans" data-value="non-fiction">Non Fiction</button>
+      <button class="tag work-sans" data-value="horror">Horror</button>
+      <button class="tag work-sans" data-value="historical">Historical</button>
+    </div>
+    <div class="books-view">
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+    </div>
+  </main>
   <script type="text/javascript" src="data.json" defer></script>
 </body>
 </html>
