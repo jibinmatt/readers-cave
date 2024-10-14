@@ -1,24 +1,3 @@
-// const allBooks = document.querySelectorAll('[data-value]')
-// import data from "./data.json" assert { type: "json" }
-
-// console.log(data)
-
-// allBooks.forEach(book => {
-// 	// handles opening of book-details
-// 	book.addEventListener("click", () => {
-// 		localStorage.setItem('id', book.getAttribute("data-value"));
-// 		console.log(book.getAttribute("data-value"))
-// 		window.open('./detail.html', "_self");
-// 	})
-
-// 	// handles loading of book-cover and book-title
-// 	console.log(book.childNodes)
-// 	book.childNodes[1].src = data[book.getAttribute('data-value')].cover
-// 	book.childNodes[3].textContent = data[book.getAttribute('data-value')].title
-// })
-
-// import data from "./compact_cleaned_data.json"
-
 const booksView = document.querySelector(".books-view");
 let numOfBooksLoaded = 50;
 dataFetch()
@@ -58,13 +37,18 @@ function populateBooks(numOfBooksLoaded, data) {
 function populateBookCovers(data) {
   const bookCovers = document.querySelectorAll(".book-cover")
   bookCovers.forEach((bookCover, index) => {
-    bookCover.src = data[index]["cover_link"];
-    bookCover.alt = data[index]["title"]
+    if (data[index]["cover_link"]) {
+      bookCover.src = data[index]["cover_link"];
+      bookCover.alt = data[index]["title"]
+    } else {
+      bookCover.src = `https://placehold.co/224x336/B9B9B9/575757/?text=${data[index]["title"]}`
+      bookCover.alt = data[index]["title"]
+    }
   });
 }
 
 function isAtBottom() {
-  const scrollTop = window.scrollY || window.pageYOffset;
+  const scrollTop = window.scrollY;
   const documentHeight = document.documentElement.scrollHeight;
   const viewportHeight = window.innerHeight;
   return scrollTop + viewportHeight >= documentHeight - 1;

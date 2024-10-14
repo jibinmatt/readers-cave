@@ -1,0 +1,162 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: flex;
+  height: 100vh;
+  background-color: #D0D0D0;
+}
+
+.content {
+  width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  background-color: #D0D0D0;
+}
+
+.cover-img {
+  position: fixed;
+  width: 45rem;
+  height: min-content;
+  padding: 4.35rem 0;
+  display: grid;
+  place-content: center;
+}
+
+.cover-img img {
+  width: 32rem;
+  height: 51.5rem;
+}
+
+.main-content {
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  margin: 6.25rem 0;
+  margin-left: 45rem;
+}
+
+.gilda-display-regular {
+  font-family: "Gilda Display", serif;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.work-sans {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.04em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.book-title {
+  font-size: 3.125rem;
+}
+
+.author {
+  color: #6A6A6A;
+  font-size: 3.125rem;
+  margin-top: 0.625rem;
+}
+
+.book-description {
+  font-size: 1.25rem;
+  width: 39.25rem;
+  margin-top: 2.5rem;
+}
+
+.book-details {
+  display: flex;
+  margin-top: 2.5rem;
+}
+
+.book-details-table {
+  width: 27.5rem;
+  height: 10rem;
+  border: 1px solid #B7B7B7;
+  border-radius: 0.625rem;
+  border-spacing: 0;
+}
+
+.book-details-table td {
+  border: 1px solid #B7B7B7;
+  width: 13.75rem;
+  text-align: center;
+}
+
+.table-text {
+  font-size: 1rem;
+}
+
+.table-text-pages {
+  border-top-left-radius: 0.625rem;
+}
+
+.table-text-pages-value {
+  border-top-right-radius: 0.625rem;
+}
+
+.table-text-lang {
+  border-bottom-left-radius: 0.625rem;
+}
+
+.table-text-lang-value {
+  border-bottom-right-radius: 0.625rem;
+}
+
+.az-link {
+  all: unset;
+  background-color: #DCDCDC;
+  border: 1px solid #B7B7B7;
+  border-radius: 0.625rem;
+  margin-left: 1.25rem;
+  width: 10.5rem;
+  height: 10rem;
+  text-align: center;
+}
+
+.az-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.az-link:hover {
+  cursor: pointer;
+  transition: 300ms;
+  background-color: #FF9900;
+}
+
+.az-link:active {
+  background-color: #000;
+}
+
+.sub-title {
+  color: #6A6A6A;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.recommended-books, .series-books {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid #6A6A6A; */
+  width: 39.25rem;
+  margin-top: 2.5rem;
+}
+
+.recommended-book, .series-book {
+  width: 11.375rem;
+  height: 18.3125rem;
+  background-color: white;
+  border-radius: 0.3125rem;
+}
+
+.series-book {
+  margin-bottom: 6.25rem;
+}
