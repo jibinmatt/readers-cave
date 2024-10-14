@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="book-details-styles.css">
+  <script type="module" src="book-details-app.js" defer></script>
+  <script type="application/json" src="compact_cleaned_data.json" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="content">
+    <aside class="cover-img">
+      <img src="" alt="Book Cover" class="book-cover">
+    </aside>
+    <main class="main-content">
+      <h1 class="book-title gilda-display-regular">The Bonehunters</h1>
+      <h2 class="author gilda-display-regular">Steven Erikson</h2>
+      <p class="book-description work-sans">The Bonehunters begins two months after the events of House of Chains. The Malazan Fourteenth Army has destroyed the army of the Whirlwind, and Adjunct Tavore Paran has executed Sha'ik... </p>
+      <div class="book-details">
+        <table class="book-details-table">
+          <tr class="table-row">
+            <td class="table-text table-text-pages work-sans">Pages</td>
+            <td class="table-text table-text-pages-value work-sans table-data-pages"></td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-text  work-sans">First Published Date</td>
+            <td class="table-text table-text-value work-sans table-data-date"></td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-text  work-sans">Series</td>
+            <td class="table-text-value work-sans table-data-series"></td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-text  work-sans">ISBN</td>
+            <td class="table-text-value work-sans table-data-isbn"></td>
+          </tr>
+          <tr class="table-row">
+            <td class="table-text table-text-lang work-sans">Language</td>
+            <td class="table-text table-text-lang-value work-sans">English</td>
+          </tr>
+        </table>
+        <button class="az-link">
+          <img class="az-icon" src="./images/amazon_icon.png" alt="amazon icon">
+        </button>
+      </div>
+      <h3 class="sub-title gilda-display-regular">Recommended Books</h3>
+      <div class="recommended-books">
+        <div class="recommended-book"></div>
+        <div class="recommended-book"></div>
+        <div class="recommended-book"></div>
+      </div>
+      <h3 class="sub-title gilda-display-regular">Books in Series</h3>
+      <div class="series-books">
+        <div class="series-book"></div>
+        <div class="series-book"></div>
+        <div class="series-book"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
