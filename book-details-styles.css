@@ -65,10 +65,28 @@ body {
   margin-top: 0.625rem;
 }
 
-.book-description {
+.book-description-wrapper {
+  /* border: 1px solid red; */
   font-size: 1.25rem;
   width: 39.25rem;
+  height: 6.5rem;
+  overflow: clip;
   margin-top: 2.5rem;
+
+}
+
+.book-desc:hover {
+  animation: scrollText 20s linear infinite;
+  display: inline-block;
+}
+
+.book-desc:active {
+  animation: scrollText 5s linear infinite;
+}
+
+@keyframes scrollText {
+  from { transform: translateY(0%); }
+  to { transform: translateY(-100%); }
 }
 
 .book-details {
@@ -112,6 +130,8 @@ body {
 
 .az-link {
   all: unset;
+  display: grid;
+  place-items: center;
   background-color: #DCDCDC;
   border: 1px solid #B7B7B7;
   border-radius: 0.625rem;

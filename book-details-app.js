@@ -20,13 +20,28 @@ function getQueryParam(param) {
 
 function populateBookDetails(bookDetails) {
   const bookCover = document.querySelector(".book-cover")
-  console.log(bookCover)
+  const bookTitle = document.querySelector(".book-title")
+  const bookAuthor = document.querySelector(".author")
+  const bookDesc = document.querySelector(".book-desc")
+  const bookDetPages = document.querySelector(".table-data-pages")
+  const bookDetDate = document.querySelector(".table-data-date")
+  const bookDetSeries = document.querySelector(".table-data-series")
+  const bookDetIsbn = document.querySelector(".table-data-isbn")
+  const azLink = document.querySelector(".az-link")
+
   if (bookDetails["cover_link"]) {
-    bookCover.setAttribute("src", bookDetails["cover_link"])
-    bookCover.setAttribute("alt", bookDetails["title"])
-  } else {
-    bookCover.setAttribute("src", `https://placehold.co/512x824/B9B9B9/575757/?text=${bookDetails["title"]}`)
-    bookCover.setAttribute("alt", bookDetails["title"])
+    bookCover.src = bookDetails["cover_link"]
+    bookCover.alt = bookDetails["title"] || "No title available"
   }
-  // bookCover.setAttribute()
+  
+  bookTitle.textContent = bookDetails["title"] || "No title available"
+  bookAuthor.textContent = bookDetails["author"] || "Unknown author"
+  bookDesc.textContent = bookDetails["description"] || "No description available"
+  bookDetPages.textContent = bookDetails["number_of_pages"] || "N/A"
+  bookDetDate.textContent = bookDetails["date_published"] || "Unknown date"
+  bookDetSeries.textContent = bookDetails["series"] || "N/A"
+  bookDetIsbn.textContent = bookDetails["isbn"] || "N/A"
+  azLink.href = bookDetails["worldcat_redirect_link"] || "/"
 }
+
+
