@@ -60,6 +60,15 @@ body {
   font-size: 3.125rem;
 }
 
+.author-link {
+  all: unset;
+}
+
+.author-link:hover, .author:hover {
+  cursor: pointer;
+  color: #000;
+}
+
 .author {
   color: #6A6A6A;
   font-size: 3.125rem;
@@ -124,7 +133,7 @@ body {
   border-bottom-right-radius: 0.625rem;
 }
 
-.az-link {
+.gr-link {
   all: unset;
   display: grid;
   place-items: center;
@@ -137,23 +146,23 @@ body {
   text-align: center;
 }
 
-.az-icon {
+.gr-icon {
   /* width: 3.5rem; */
   height: 1.5rem;
 }
 
-.az-link:hover {
+.gr-link:hover {
   cursor: pointer;
   transition: 300ms;
   background: rgb(233,229,204);
   background: linear-gradient(0deg, rgba(233,229,204,1) 45%, rgba(246,246,237,1) 80%);
 }
 
-.az-link:hover .az-icon {
+.gr-link:hover .gr-icon {
   content: url(./images/gr_icon_logo.png);
 }
 
-.az-link:active {
+.gr-link:active {
   background-color: #000;
 }
 
@@ -166,12 +175,11 @@ body {
 .recommended-books {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr) 0.5fr;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  /* border: 1px solid #6A6A6A; */
   width: 39.25rem;
   margin-top: 2.5rem;
+  padding-bottom: 7rem;
 }
 
 .recommended-book {
