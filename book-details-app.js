@@ -9,7 +9,7 @@ function dataFetch(bookId) {
     console.log(data)
     const bookDetails = data.find(book => book["id"] === bookId);
     console.log(bookDetails)
-    populateBookDetails(bookDetails)
+    populateBookDetails(bookDetails, data)
   });
 }
 
@@ -18,7 +18,11 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-function populateBookDetails(bookDetails) {
+function getRecBookDetails(data, recBookID) {
+  return data.find(obj => obj.id === recBookID);
+}
+
+function populateBookDetails(bookDetails, data) {
   const bookCover = document.querySelector(".book-cover")
   const bookTitle = document.querySelector(".book-title")
   const bookAuthor = document.querySelector(".author")
@@ -28,6 +32,7 @@ function populateBookDetails(bookDetails) {
   const bookDetSeries = document.querySelector(".table-data-series")
   const bookDetIsbn = document.querySelector(".table-data-isbn")
   const azLink = document.querySelector(".az-link")
+  const recommendedBooksWrapper = document.querySelector(".recommended-books")
 
   if (bookDetails["cover_link"]) {
     bookCover.src = bookDetails["cover_link"]
@@ -41,7 +46,28 @@ function populateBookDetails(bookDetails) {
   bookDetDate.textContent = bookDetails["date_published"] || "Unknown date"
   bookDetSeries.textContent = bookDetails["series"] || "N/A"
   bookDetIsbn.textContent = bookDetails["isbn"] || "N/A"
-  azLink.href = bookDetails["worldcat_redirect_link"] || "/"
+  azLink.href = bookDetails["link"] || "/"
+  azLink.target = "_blank" 
+
+  for (let rbook in bookDetails["recommended_books"]) {
+    const recommendedBook = document.createElement("div")
+    const recBookCover = document.createElement("img")
+    const recbookLink = document.createElement("a");
+    let recBookId = bookDetails["recommended_books"][rbook]
+    let recBookDetails = getRecBookDetails(data, recBookId)
+
+    if (recBookDetails) {
+      recBookCover.src = recBookDetails["cover_link"]
+      recbookLink.href = `book-details.html?id=${recBookDetails["id"]}`
+      recbookLink.target = "_blank"
+      recommendedBook.className = "recommended-book"
+      recBookCover.className = "rec-book-cover"
+
+      recbookLink.appendChild(recBookCover)
+      recommendedBook.appendChild(recbookLink)
+      recommendedBooksWrapper.appendChild(recommendedBook)
+    }
+  }
 }
 
 

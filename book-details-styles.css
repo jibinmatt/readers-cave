@@ -30,6 +30,7 @@ body {
 .cover-img img {
   width: 32rem;
   height: 51.5rem;
+  border-radius: 1rem;
 }
 
 .main-content {
@@ -72,21 +73,16 @@ body {
   height: 6.5rem;
   overflow: clip;
   margin-top: 2.5rem;
-
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #B7B7B7;
 }
 
-.book-desc:hover {
-  animation: scrollText 20s linear infinite;
-  display: inline-block;
-}
-
-.book-desc:active {
-  animation: scrollText 5s linear infinite;
-}
-
-@keyframes scrollText {
-  from { transform: translateY(0%); }
-  to { transform: translateY(-100%); }
+.book-description-wrapper:hover {
+  overflow: visible;
+  transition: all 500ms;
+  height: min-content;
+  background-color: #DCDCDC;
 }
 
 .book-details {
@@ -132,7 +128,7 @@ body {
   all: unset;
   display: grid;
   place-items: center;
-  background-color: #DCDCDC;
+  background-color: #fff;
   border: 1px solid #B7B7B7;
   border-radius: 0.625rem;
   margin-left: 1.25rem;
@@ -142,14 +138,19 @@ body {
 }
 
 .az-icon {
-  width: 1.5rem;
+  /* width: 3.5rem; */
   height: 1.5rem;
 }
 
 .az-link:hover {
   cursor: pointer;
   transition: 300ms;
-  background-color: #FF9900;
+  background: rgb(233,229,204);
+  background: linear-gradient(0deg, rgba(233,229,204,1) 45%, rgba(246,246,237,1) 80%);
+}
+
+.az-link:hover .az-icon {
+  content: url(./images/gr_icon_logo.png);
 }
 
 .az-link:active {
@@ -162,21 +163,27 @@ body {
   margin-top: 2.5rem;
 }
 
-.recommended-books, .series-books {
-  display: flex;
-  justify-content: space-between;
+.recommended-books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr) 0.5fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
   /* border: 1px solid #6A6A6A; */
   width: 39.25rem;
   margin-top: 2.5rem;
 }
 
-.recommended-book, .series-book {
+.recommended-book {
   width: 11.375rem;
   height: 18.3125rem;
   background-color: white;
   border-radius: 0.3125rem;
 }
 
-.series-book {
-  margin-bottom: 6.25rem;
+.rec-book-cover {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 0.3125rem;
 }
