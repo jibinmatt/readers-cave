@@ -65,18 +65,17 @@ body {
 }
 
 .author-link:hover, .author:hover {
+  text-decoration: underline;
   cursor: pointer;
   color: #000;
 }
 
 .author {
   color: #6A6A6A;
-  font-size: 3.125rem;
   margin-top: 0.625rem;
 }
 
 .book-description-wrapper {
-  /* border: 1px solid red; */
   font-size: 1.25rem;
   width: 39.25rem;
   height: 6.5rem;
@@ -85,11 +84,12 @@ body {
   border-radius: 10px;
   padding: 10px;
   border: 1px solid #B7B7B7;
+  transition: all 0.3s;
 }
 
 .book-description-wrapper:hover {
   overflow: visible;
-  transition: all 500ms;
+  transition: all 300ms;
   height: min-content;
   background-color: #DCDCDC;
 }
@@ -147,7 +147,6 @@ body {
 }
 
 .gr-icon {
-  /* width: 3.5rem; */
   height: 1.5rem;
 }
 
@@ -159,6 +158,7 @@ body {
 }
 
 .gr-link:hover .gr-icon {
+  height: 4rem;
   content: url(./images/gr_icon_logo.png);
 }
 
@@ -167,6 +167,7 @@ body {
 }
 
 .sub-title {
+  display: block;
   color: #6A6A6A;
   font-size: 1.5rem;
   margin-top: 2.5rem;

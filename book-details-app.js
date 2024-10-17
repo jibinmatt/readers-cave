@@ -1,25 +1,22 @@
-const bookId = getQueryParam('id');
-console.log(bookId)
+const bookId = getQueryParam('id') 
 dataFetch(bookId)
 
 function dataFetch(bookId) {
   fetch('/compact_cleaned_data.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data)
-    const bookDetails = data.find(book => book["id"] === bookId);
-    console.log(bookDetails)
+    const bookDetails = data.find(book => book["id"] === bookId) 
     populateBookDetails(bookDetails, data)
-  });
+  }) 
 }
 
 function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
+  const urlParams = new URLSearchParams(window.location.search) 
+  return urlParams.get(param) 
 }
 
 function getRecBookDetails(data, recBookID) {
-  return data.find(obj => obj.id === recBookID);
+  return data.find(obj => obj.id === recBookID) 
 }
 
 function populateBookDetails(bookDetails, data) {
@@ -34,7 +31,8 @@ function populateBookDetails(bookDetails, data) {
   const bookDetIsbn = document.querySelector(".table-data-isbn")
   const grLink = document.querySelector(".gr-link")
   const recommendedBooksWrapper = document.querySelector(".recommended-books")
-
+  
+  document.title = bookDetails["title"] || "Document"
   if (bookDetails["cover_link"]) {
     bookCover.src = bookDetails["cover_link"]
     bookCover.alt = bookDetails["title"] || "No title available"
@@ -55,10 +53,9 @@ function populateBookDetails(bookDetails, data) {
   for (let rbook in bookDetails["recommended_books"]) {
     const recommendedBook = document.createElement("div")
     const recBookCover = document.createElement("img")
-    const recbookLink = document.createElement("a");
+    const recbookLink = document.createElement("a") 
     let recBookId = bookDetails["recommended_books"][rbook]
-    let recBookDetails = getRecBookDetails(data, recBookId)
-
+    let recBookDetails = getRecBookDetails(data, recBookId)    
     if (recBookDetails) {
       recBookCover.src = recBookDetails["cover_link"]
       recbookLink.href = `book-details.html?id=${recBookDetails["id"]}`
@@ -69,8 +66,12 @@ function populateBookDetails(bookDetails, data) {
       recbookLink.appendChild(recBookCover)
       recommendedBook.appendChild(recbookLink)
       recommendedBooksWrapper.appendChild(recommendedBook)
+      document.querySelector(".sub-title").style.display = "block"
+    }
+
+    // remove "Recommended Books" subtitle if no recommended books available
+    if (!recommendedBooksWrapper.hasChildNodes()) {
+      document.querySelector(".sub-title").style.display = "none"
     }
   }
 }
-
-
